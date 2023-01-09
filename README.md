@@ -10,4 +10,6 @@
 - name* | on some programs the * symbol apply an action to all files with that name.
 - uname -r ; uname -a | show OS/kernel information.
 - cd $HOME | change the active directory to your user folder.
-- startx | start X.Org from tty (the command on .xinitrc will run).
+- startx | start X.Org from terminal (the command on .xinitrc will run).
+- df -h | show information about your partitions/filesystems.
+- ./ | this operator will launch any program from terminal.
