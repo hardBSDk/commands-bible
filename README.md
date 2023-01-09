@@ -8,3 +8,6 @@
 - --appimage-extract | option to extract AppImage files.
 - lscpu | show CPU information.
 - name* | on some programs the * symbol apply an action to all files with that name.
+- uname -r ; uname -a | show OS/kernel information.
+- cd $HOME | change the active directory to your user folder.
+- startx | start X.Org from tty (the command on .xinitrc will run).
