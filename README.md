@@ -7,4 +7,4 @@
 - export PATH=$PATH:your_directory | add a new PATH to your shell.
 - --appimage-extract | option to extract AppImage files.
 - lscpu | show CPU information.
-- name* | on some programs, the * symbol apply an action to all files with that name.
+- name* | on some programs the * symbol apply an action to all files with that name.
