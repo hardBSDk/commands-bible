@@ -22,7 +22,7 @@
 
 #### `hostname` | Show system DNS name.
 #### `hostname -I` | Show all network addresses of your system.
-#### `ping [website link or IP address] | Ping any website or IP to see if it's online or measure your connection delay.
+#### `ping (website link or IP address)` | Ping any website or IP to see if it's online or measure your connection delay.
 #### `whois https://websitename.com` | Show website registration information.
 
 ## User
