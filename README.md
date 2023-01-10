@@ -52,3 +52,4 @@
 #### `ls *` | Show the files/folders inside all the folders of the directory.
 #### `ls -a *` | Show all files/folders inside all the folders of the directory, inclusing hidden ones.
 #### `ls -l` | Show advanced information about the files/folders of the directory.
+#### `find /name/of/the/folder or nameofthefile` | Search for files/folders on the directory/filesystem.
