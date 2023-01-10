@@ -1,5 +1,5 @@
 - su - | become root with echo.
-- whoami | actual user on $PATH.
+- whoami | actual active user on shell/$PATH.
 - cd - | change active directory with echo.
 - echo $PATH | show the directories in $PATH environment variable.
 - $HOME | environment variable for user folder.
