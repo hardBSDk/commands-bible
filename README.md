@@ -40,7 +40,7 @@
 #### `git clone https://github.com/nameoftheuser/nameoftherepository.git` | Download any GitHub repository to the active directory.
 #### `git clone https://websitename.com/nameoftherepository.git` | Download any remote Git repository.
 #### `git clone https://websitename.com/nameoftherepository.git /name/of/your/folder` | Download a Git repository to the specified directory.
-#### `wget https://website.com/nameofthefile` | Download any file (as the HTTP protocol headers are flexible, it can download the wrong file, so try to specify the exact file without header problems, generally an exposed extension of the file in the URL).
+#### `wget https://website.com/nameofthefile` | Download any file (as the HTTP protocol headers are flexible, it can download the wrong file, so try to specify the exact file without header problems, generally an exposed extension of the file in the URL "https://website.com/nameofthefile.extension").
 #### `wget -c https://website.com/nameofthefile` | Download any file and try again from where it stopped if the connection failed (-c option).
 
 ## Files/Folders
