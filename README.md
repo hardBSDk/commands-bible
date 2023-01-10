@@ -27,6 +27,7 @@
 #### `chsh -s /path/of/your/shell` | Change your default terminal shell permanently (common path is /usr/bin).
 #### `alias name='command'` | Add an alias/abbreviation for a command on your terminal shell (add this command on your shell configuration file to be permanent, generally a file named `.nameofyourshellrc` on your user folder).
 #### `Ctrl+C` | This keyboard shortcut cancel any command process.
+#### `clear` | Clean your terminal content/output.
 
 ## Programs
 
