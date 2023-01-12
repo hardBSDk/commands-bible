@@ -80,6 +80,14 @@
 #### `WINEPREFIX=~/.yourprefixname ./wine explorer` | Run Wine Explorer from the specified Wine Prefix.
 #### `--appimage-extract` | Option to extract AppImage files.
 
+## Package Management
+
+#### `autoremove` | This common argument remove unused dependencies on some package managers.
+#### `autoclean` | This common argument remove packages cache.
+#### `package_name*` | This symbol applies an action to all packagess with that name.
+#### `dpkg --configure -a` | Fix a incomplete package install on Debian systems.
+#### `pkg delete -a` | Remove all packages on FreeBSD systems.
+
 ## Files/Folders
 
 #### `pwd` | Show the current active directory.
