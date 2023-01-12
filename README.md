@@ -59,6 +59,7 @@
 #### `sh yourscriptname` | Run a non-executable sh script.
 #### `bash yourscriptname` | Run a non-executable bash script.
 #### `killall process_name` | Kill all instances of a running program.
+#### `killall -u username` | Kill all processes of an user.
 #### `>` | This operator store the output of a task on some file (example: `task > file.txt`).
 #### `>>` | This operator store the output of a task on some file but don't overwrite it's contents (example: `task > file.txt`).
 #### `|` | This operator apply a command above the output of other program (example: `glxinfo | grep OpenGL`, this command will search for "OpenGL" inside the output of "glxinfo").
