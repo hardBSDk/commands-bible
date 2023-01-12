@@ -4,6 +4,7 @@
 #### `free -m` | Show memory information.
 #### `dmesg` | Show OS/kernel log.
 #### `df -h` | Show information about your partitions/filesystems.
+#### `kldload module_name` | Load a module to the kernel.
 
 ## Hardware
 
@@ -51,6 +52,7 @@
 
 #### `echo "text"` | Show the specified text on terminal.
 #### `echo $PATH` | Show the directories in $PATH environment variable.
+#### `ldd program_name` | Show the dependencies (shared libraries) used by a program.
 #### `export PATH=$PATH:/your/directory` | Add a new PATH to your terminal shell.
 #### `reset` | Restore the terminal variables to their default values.
 #### `time command` | Count the time taken for a program to run the command.
