@@ -123,5 +123,6 @@
 #### `rmdir /your/folder` | Remove an empty directory.
 #### `echo "text" >> /directory/file` | Example command to add text on any file.
 #### `.nameofthefile or .nameofthefolder` | A dot before the name of a file/folder make it hidden.
-#### `find /nameof/thefolder or nameofthefile` | Search for files/folders on the directory/filesystem.
+#### `find . -type f -name file_name` | Search for files on the directory/subdirectories (run with sudo/su if the directories are under root permissions).
+#### `find . -type d -name folder_name` | Search for folders on the directory/subdirectories (run with sudo/su if the directories are under root permissions).
 #### `tree /nameof/thefolder` | Show all folders/files/subfolders/subfiles in a tree.
