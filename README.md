@@ -5,6 +5,8 @@
 #### `dmesg` | Show OS/kernel log.
 #### `df -h` | Show information about your partitions/filesystems.
 #### `kldload module_name` | Load a module to the kernel.
+#### `sudo umount /your/path` | Unmount one filesystem.
+#### `sudo umount -a` | Unmount all filesystems except root filesystem.
 
 ## Hardware
 
