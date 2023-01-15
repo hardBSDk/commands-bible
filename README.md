@@ -8,6 +8,8 @@
 #### `ls /lib/modules/$(uname -r)/kernel/drivers/` | Show all available modules for kernel.
 #### `lsmod` | Show status of the modules on kernel.
 #### `sudo modprobe module_name` | Load a module to the kernel (Linux).
+#### `sudo modprobe -r module_name | Remove a module from the kernel.
+#### `sudo rmmod module_name | Remove a module from the kernel.
 #### `kldload module_name` | Load a module to the kernel (BSD).
 #### `cat /proc/sys/vm/swappiness` | Show how much % of the physical memory will go to swap (Linux).
 #### `echo "vm.swappiness=50" >> sudo nano /etc/sysctl.conf` | Set how much % of physical memory allocate to swap (Linux).
