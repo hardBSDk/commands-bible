@@ -11,8 +11,6 @@
 #### `sudo modprobe -r module_name | Remove a module from the kernel.
 #### `sudo rmmod module_name | Remove a module from the kernel.
 #### `kldload module_name` | Load a module to the kernel (BSD).
-#### `cat /proc/sys/vm/swappiness` | Show how much % of the physical memory will go to swap (Linux).
-#### `echo "vm.swappiness=50" >> sudo nano /etc/sysctl.conf` | Set how much % of physical memory allocate to swap (Linux).
 #### `sudo umount /your/path` | Unmount one filesystem.
 #### `sudo umount -a` | Unmount all filesystems except root filesystem.
 
