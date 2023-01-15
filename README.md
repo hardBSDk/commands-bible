@@ -6,6 +6,7 @@
 #### `df -h` | Show information about your partitions/filesystems.
 #### `ls /lib/modules/$(uname -r)` | Show the active modules on kernel.
 #### `ls /lib/modules/$(uname -r)/kernel/drivers/` | Show all available modules for kernel.
+#### `lsmod` | Show status of the modules on kernel.
 #### `sudo modprobe module_name` | Load a module to the kernel (Linux).
 #### `kldload module_name` | Load a module to the kernel (BSD).
 #### `cat /proc/sys/vm/swappiness` | Show how much % of the physical memory will go to swap (Linux).
