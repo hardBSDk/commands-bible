@@ -4,7 +4,12 @@
 #### `free -m` | Show memory information.
 #### `dmesg` | Show OS/kernel log.
 #### `df -h` | Show information about your partitions/filesystems.
-#### `kldload module_name` | Load a module to the kernel.
+#### `ls /lib/modules/$(uname -r)` | Show the active modules on kernel.
+#### `ls /lib/modules/$(uname -r)/kernel/drivers/` | Show all available modules for kernel.
+#### `sudo modprobe module_name` | Load a module to the kernel (Linux).
+#### `kldload module_name` | Load a module to the kernel (BSD).
+#### `cat /proc/sys/vm/swappiness` | Show how much % of the physical memory will go to swap (Linux).
+#### `echo "vm.swappiness=50" >> sudo nano /etc/sysctl.conf` | Set how much % of physical memory allocate to swap (Linux).
 #### `sudo umount /your/path` | Unmount one filesystem.
 #### `sudo umount -a` | Unmount all filesystems except root filesystem.
 
@@ -14,6 +19,9 @@
 #### `cat /proc/meminfo` | Advanced memory information.
 #### `ifconfig` | Show all active network interfaces.
 #### `iwconfig` | Show all active wireless network interfaces.
+#### `cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors` | Show available CPU governors.
+#### `cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor` | Show current CPU governor.
+#### `echo governor_name | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor` | Activate a CPU governor (most used are "powersave","performance" and "ondemand").
 
 ## Graphics
 
