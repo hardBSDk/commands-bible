@@ -8,8 +8,8 @@
 #### `ls /lib/modules/$(uname -r)/kernel/drivers/` | Show all available modules for kernel.
 #### `lsmod` | Show status of the modules on kernel.
 #### `sudo modprobe module_name` | Load a module to the kernel (Linux).
-#### `sudo modprobe -r module_name | Remove a module from the kernel.
-#### `sudo rmmod module_name | Remove a module from the kernel.
+#### `sudo modprobe -r module_name` | Remove a module from the kernel.
+#### `sudo rmmod module_name` | Remove a module from the kernel.
 #### `kldload module_name` | Load a module to the kernel (BSD).
 #### `sudo umount /your/path` | Unmount one filesystem.
 #### `sudo umount -a` | Unmount all filesystems except root filesystem.
@@ -29,6 +29,7 @@
 #### `startx` | Start X.Org from terminal (the command on .xinitrc will run).
 #### `glxinfo | grep OpenGL` | Show your OpenGL driver name/version.
 #### `vulkaninfo | grep Vulkan` | Show your Vulkan driver name/version.
+#### `MESA_LOADER_DRIVER_OVERRIDE=zink program` | Environment variable to make a program use a different Mesa 3D driver.
 
 ## Networking
 
@@ -58,6 +59,7 @@
 #### `passwd nameoftheuser` | Change the user password.
 #### `history` | Show the commands history.
 #### `history name` | Show the commands with the name specified in history.
+#### `chown username /your/directory` or `chown username file_name` | Change the ownership of a file/folder/device/mounted partition (run with su, sudo or doas).
 
 ## Programs
 
