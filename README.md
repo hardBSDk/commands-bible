@@ -13,6 +13,7 @@
 #### `kldload module_name` | Load a module to the kernel (BSD).
 #### `sudo umount /your/path` | Unmount one filesystem.
 #### `sudo umount -a` | Unmount all filesystems except root filesystem.
+#### `sudo systemctl reboot` | Restart the system (systemd).
 
 ## Hardware
 
@@ -59,7 +60,7 @@
 #### `passwd nameoftheuser` | Change the user password.
 #### `history` | Show the commands history.
 #### `history name` | Show the commands with the name specified in history.
-#### `chown username /your/directory` or `chown username file_name` | Change the ownership of a file/folder/device/mounted partition (run with su, sudo or doas).
+#### `sudo chown username /your/directory` or `chown username file_name` | Change the ownership of a file/folder/device/mounted partition.
 
 ## Programs
 
