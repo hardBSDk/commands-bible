@@ -30,7 +30,7 @@
 #### `startx` | Start X.Org from terminal (the command on .xinitrc will run).
 #### `glxinfo | grep OpenGL` | Show your OpenGL driver name/version.
 #### `vulkaninfo | grep Vulkan` | Show your Vulkan driver name/version.
-#### `MESA_LOADER_DRIVER_OVERRIDE=zink program` | Environment variable to make a program use a different Mesa 3D driver.
+#### `MESA_LOADER_DRIVER_OVERRIDE=driver_name program` | Environment variable to make a program use a different Mesa 3D driver.
 
 ## Networking
 
