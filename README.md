@@ -1,8 +1,12 @@
 ## Operating System/Kernel
 
 #### `uname -r ; uname -a` | Show OS/kernel information.
-#### `free -m` | Show memory information.
+#### `free -h` | Show memory information.
 #### `dmesg` | Show OS/kernel log.
+#### `cat /etc/rc.conf` | Show rc init active services (BSD).
+#### `ls /home` | Show all normal users on the system.
+#### `sudo fdisk -l` | Show all your storage devices.
+#### `cat `/etc/fstab` | Show all your configured mountpoints.
 #### `df -h` | Show information about your partitions/filesystems.
 #### `ls /lib/modules/$(uname -r)` | Show the active modules on kernel.
 #### `ls /lib/modules/$(uname -r)/kernel/drivers/` | Show all available modules for kernel.
@@ -17,11 +21,17 @@
 #### `sudo swapon` | Show active swap partition/file.
 #### `sudo swapon -a` | Enable mounted swap (on /etc/fstab or swapfile).
 #### `sudo swapoff -a | Disable swap.
+#### `cat /sys/block/sdX/queue/scheduler` | Show the available/active I/O schedulers for your disk (X is your disk letter).
+#### `grep "" /sys/block/*/queue/scheduler` | Show all available I/O schedulers for all disks.
+#### `echo scheduler_name > /sys/block/sdX/queue/scheduler` | Change your active disk I/O scheduler.
 
 ## Hardware
 
 #### `lscpu` | Show CPU information.
+#### `lsusb -t` | Show your USB device tree (motherboard ports/bandwidth).
+#### `lspci -tv` | Show your PCI device tree (same as above).
 #### `cat /proc/meminfo` | Advanced memory information.
+#### `hdparm -t /dev/sdX` | Show how fast your hard disk read the data (X is the letter of your disk, use fdisk -l to check).
 #### `ifconfig` | Show all active network interfaces.
 #### `iwconfig` | Show all active wireless network interfaces.
 #### `cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors` | Show available CPU governors.
@@ -31,8 +41,10 @@
 ## Graphics
 
 #### `startx` | Start X.Org from terminal (the command on .xinitrc will run).
+#### `cat $HOME/.xinitrc` | Show active program on X init config file (startx read this file).
 #### `glxinfo | grep OpenGL` | Show your OpenGL driver name/version.
 #### `vulkaninfo | grep Vulkan` | Show your Vulkan driver name/version.
+#### `glxinfo | grep "direct rendering"` | Show if you have direct rendering enabled for GPU-oriented software.
 #### `MESA_LOADER_DRIVER_OVERRIDE=driver_name program` | Environment variable to make a program use a different Mesa 3D driver.
 
 ## Networking
@@ -98,6 +110,9 @@
 #### `--appimage-extract` | Option to extract AppImage files.
 #### `make -j1` | Choose how many threads will be used for compilation.
 #### `sudo make install` | Install the program on the system.
+#### `ls /etc` | Show configuration files for all programs installed on the systemd.
+#### `ls $HOME/.local` | Show the user configuration files for programs.
+#### `ls $HOME/.config` | Show files stored by XDG-compliant programs (FreeDesktop standard).
 
 ## Package Management
 
