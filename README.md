@@ -20,7 +20,7 @@
 #### `sudo systemctl reboot` | Restart the system (systemd).
 #### `sudo swapon` | Show active swap partition/file.
 #### `sudo swapon -a` | Enable mounted swap (on /etc/fstab or swapfile).
-#### `sudo swapoff -a | Disable swap.
+#### `sudo swapoff -a` | Disable swap.
 #### `cat /sys/block/sdX/queue/scheduler` | Show the available/active I/O schedulers for your disk (X is your disk letter).
 #### `grep "" /sys/block/*/queue/scheduler` | Show all available I/O schedulers for all disks.
 #### `echo scheduler_name > /sys/block/sdX/queue/scheduler` | Change your active disk I/O scheduler.
