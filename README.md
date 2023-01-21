@@ -6,7 +6,7 @@
 #### `cat /etc/rc.conf` | Show rc init active services (BSD).
 #### `ls /home` | Show all normal users on the system.
 #### `sudo fdisk -l` | Show all your storage devices.
-#### `cat `/etc/fstab` | Show all your configured mountpoints.
+#### `cat /etc/fstab` | Show all your configured mountpoints.
 #### `df -h` | Show information about your partitions/filesystems.
 #### `ls /lib/modules/$(uname -r)` | Show the active modules on kernel.
 #### `ls /lib/modules/$(uname -r)/kernel/drivers/` | Show all available modules for kernel.
