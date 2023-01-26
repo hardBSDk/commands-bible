@@ -87,6 +87,8 @@
 #### `time command` | Count the time taken for a program to run the command.
 #### `name*` | On some programs the * symbol apply an action to all files with that name.
 #### `./` | This operator will launch any program from terminal.
+#### `program &` | The "&" operator is used for multitasking on terminal (it don't start the program process as a child of the terminal, but independent from it, so you can close the terminal, similar of what "exec" command does, replacing the shell process by the called program).
+#### `exec program` | Replace the shell by the called program (similar to & or exit).
 #### `sh yourscriptname` | Run a non-executable sh script.
 #### `bash yourscriptname` | Run a non-executable bash script.
 #### `killall process_name` | Kill all instances of a running program.
