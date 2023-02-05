@@ -115,7 +115,7 @@
 #### `ls /etc` | Show configuration files for all programs installed on the systemd.
 #### `ls ~/.local` | Show the user configuration files for programs.
 #### `ls ~/.config` | Show files stored by XDG-compliant programs (FreeDesktop standard).
-#### `sudo journalctl --vacuum-time=1d` | Clean systemd journal logs based on days (--vacuum-time=1d)
+#### `sudo journalctl --vacuum-time=1d` | Clean systemd journal logs older than x days (--vacuum-time=1d)
 #### `rm -rf ~/.cache/thumbnails/*` | Clean thumbnails cache.
 
 ## Package Management
