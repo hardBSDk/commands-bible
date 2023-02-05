@@ -41,7 +41,7 @@
 ## Graphics
 
 #### `startx` | Start X.Org from terminal (the command on .xinitrc will run).
-#### `cat $HOME/.xinitrc` | Show active program on X init config file (startx read this file).
+#### `cat ~/.xinitrc` | Show active program on X init config file (startx read this file).
 #### `glxinfo | grep OpenGL` | Show your OpenGL driver name/version.
 #### `vulkaninfo | grep Vulkan` | Show your Vulkan driver name/version.
 #### `glxinfo | grep "direct rendering"` | Show if you have direct rendering enabled for GPU-oriented software.
@@ -113,8 +113,10 @@
 #### `make -j1` | Choose how many threads will be used for compilation.
 #### `sudo make install` | Install the program on the system.
 #### `ls /etc` | Show configuration files for all programs installed on the systemd.
-#### `ls $HOME/.local` | Show the user configuration files for programs.
-#### `ls $HOME/.config` | Show files stored by XDG-compliant programs (FreeDesktop standard).
+#### `ls ~/.local` | Show the user configuration files for programs.
+#### `ls ~/.config` | Show files stored by XDG-compliant programs (FreeDesktop standard).
+#### `sudo journalctl --vacuum-time=1d` | Clean systemd journal logs based on days (--vacuum-time=1d)
+#### `rm -rf ~/.cache/thumbnails/*` | Clean thumbnails cache.
 
 ## Package Management
 
@@ -130,7 +132,7 @@
 #### `cd /nameof/yourfolder` | Change the active directory to the specified folder.
 #### `cd -` | Change to the previous directory with echo.
 #### `cd ..` | Change to the parent directory/folder.
-#### `cd $HOME` | Change the active directory to your user folder.
+#### `cd ~` | Change the active directory to your user folder.
 #### `ls` | Show normal folders/files of the directory.
 #### `ls -a` | Show all folders/files from a directory, including the hidden ones.
 #### `ls -A` | Show almost all files/folders, excluding the hidden . and .. Unix tree files.
