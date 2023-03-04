@@ -140,6 +140,7 @@
 #### `ls -a *` | Show all files/folders inside all the folders of the directory, inclusing hidden ones.
 #### `ls -l` | Show advanced information about the files/folders of the directory.
 #### `cat /directory/file` | Show the contents of any text file.
+#### `grep -n -r search_pattern /directory/path *.file_format` | Search for a text in the specified file format (recursively).
 #### `mkdir nameofthefolder` | Create a new folder on the active directory.
 #### `cp nameofyourfile /destination/folder` | Copy a file to other folder and overwrite on destination.
 #### `cp -p nameofyourfile /destination/folder` | Copy a file to other folder, overwrite on destination and maintain the file permissions and timestamps.
