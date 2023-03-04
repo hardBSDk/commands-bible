@@ -75,7 +75,7 @@
 #### `passwd nameoftheuser` | Change the user password.
 #### `history` | Show the commands history.
 #### `history name` | Show the commands with the name specified in history.
-#### `sudo chown username /your/directory` or `chown username file_name` | Change the ownership of a file/folder/device/mounted partition.
+#### `sudo chown -R user_name:group_name directory_name` or `chown username file_name` | Change the ownership of a file/folder/device/mounted partition (recursively).
 
 ## Programs
 
