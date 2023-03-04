@@ -110,6 +110,7 @@
 #### `WINEPREFIX=~/.yourprefixname ./wine` | Example command for custom Wine Prefixes.
 #### `WINEPREFIX=~/.yourprefixname ./wine explorer` | Run Wine Explorer from the specified Wine Prefix.
 #### `--appimage-extract` | Option to extract AppImage files.
+#### `webtorrent download "magnet:..." --vlc` | Download a torrent with webtorrent-cli and open VLC media player.
 #### `make -j1` | Choose how many threads will be used for compilation.
 #### `sudo make install` | Install the program on the system.
 #### `ls /etc` | Show configuration files for all programs installed on the systemd.
