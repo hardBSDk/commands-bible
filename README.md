@@ -113,7 +113,7 @@
 #### `webtorrent download "magnet:..." --vlc` | Download a torrent with webtorrent-cli and open VLC media player.
 #### `make -j1` | Choose how many threads will be used for compilation.
 #### `sudo make install` | Install the program on the system.
-#### `ls /etc` | Show configuration files for all programs installed on the systemd.
+#### `ls /etc` | Show configuration files for all programs installed on the system.
 #### `ls ~/.local` | Show the user configuration files for programs.
 #### `ls ~/.config` | Show files stored by XDG-compliant programs (FreeDesktop standard).
 #### `sudo journalctl --vacuum-time=1d` | Clean systemd journal logs older than x days (--vacuum-time=1d)
