@@ -1,3 +1,13 @@
+# Commands Bible
+
+- [Operating System/Kernel](#operating-systemkernel)
+- [Hardware](#hardware)
+- [Graphics](#graphics)
+- [Networking](#networking)
+- [User](#user)
+- [Programs](#programs)
+- [Files/Folders](#filesfolders)
+
 ## Operating System/Kernel
 
 #### Show OS/kernel information
@@ -166,11 +176,11 @@ vulkaninfo | grep Vulkan
 ```sh
 glxinfo | grep "direct rendering"
 ```
-#### Environment variable to make a program use a different Mesa3D driver
+#### Environment variable to make a program use a different [Mesa3D](https://mesa3d.org/) driver
 ```
 MESA_LOADER_DRIVER_OVERRIDE=driver_name program
 ```
-#### Environment variable to force a program to use LLVMpipe (OpenGL CPU emulation)
+#### Environment variable to force a program to use [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) (OpenGL CPU emulation)
 ```
 LIBGL_ALWAYS_SOFTWARE=true
 ```
