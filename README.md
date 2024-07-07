@@ -18,11 +18,11 @@ uname -r ; uname -a
 ```sh
 free -h
 ```
-#### Show OS/kernel log
+#### Show the kernel log
 ```sh
 dmesg
 ```
-#### Show rc init active services (BSD)
+#### Show rc init active services (BSDs)
 ```sh
 cat /etc/rc.conf
 ```
@@ -58,7 +58,7 @@ lsmod
 ```sh
 sudo modprobe module-name
 ```
-#### Load a module to the kernel (BSD)
+#### Load a module to the kernel (BSDs)
 ```sh
 kldload module-name
 ```
@@ -72,7 +72,7 @@ sudo rmmod module-name
 ```
 #### Unmount one filesystem
 ```sh
-sudo umount /your/path
+sudo umount your/path
 ```
 #### Unmount all filesystems except root filesystem
 ```sh
@@ -104,7 +104,7 @@ grep "" /sys/block/*/queue/scheduler
 ```
 #### Change your active disk I/O scheduler
 ```sh
-echo scheduler_name > /sys/block/sdX/queue/scheduler
+echo scheduler-name > /sys/block/sdX/queue/scheduler
 ```
 
 ## Hardware
@@ -129,7 +129,7 @@ cat /proc/meminfo
 ```sh
 sudo dmidecode -t memory
 ```
-#### Show how fast your hard disk read the data (X is the letter of your disk, use fdisk -l to check)
+#### Show how fast your hard disk read the data (X is the letter of your disk, use "fdisk -l" to check)
 ```sh
 hdparm -t /dev/sdX
 ```
@@ -149,14 +149,14 @@ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
 ```sh
 cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 ```
-#### Activate a CPU governor (most used are "powersave","performance" and "ondemand")
+#### Activate a CPU governor (the most used are "powersave", "performance" and "ondemand")
 ```sh
-echo governor_name | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+echo governor-name | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
 
 ## Graphics
 
-#### Start X11 from terminal (the command on .xinitrc will run)
+#### Start X11 from terminal (the command on the ".xinitrc" file will run)
 ```sh
 startx
 ```
@@ -164,15 +164,15 @@ startx
 ```sh
 cat ~/.xinitrc
 ```
-#### Show your OpenGL driver name/version
+#### Show your OpenGL driver information
 ```sh
 glxinfo | grep OpenGL
 ```
-#### Show your Vulkan driver name/version
+#### Show your Vulkan driver information
 ```sh
 vulkaninfo | grep Vulkan
 ```
-#### Show if you have direct rendering enabled for GPU-oriented software
+#### Check if you have [direct rendering](https://dri.freedesktop.org/wiki/) enabled
 ```sh
 glxinfo | grep "direct rendering"
 ```
@@ -241,11 +241,11 @@ sudo !!
 ```sh
 exit
 ```
-#### Current active user on terminal shell/$PATH
+#### Current active user on your terminal shell
 ```sh
 whoami
 ```
-#### Environment variable for user folder
+#### Environment variable for the current user folder
 ```sh
 $HOME
 ```
@@ -261,7 +261,7 @@ echo $0
 ```sh
 cat /etc/shells
 ```
-#### Change your default terminal shell permanently (common path is /usr/bin)
+#### Change your default terminal shell permanently (common path is `/usr/bin`)
 ```sh
 chsh -s /path/of/your/shell
 ```
@@ -271,7 +271,7 @@ alias name='command'
 ```
 #### Change the user password
 ```sh
-passwd name-of-the-user
+passwd user-name
 ```
 #### Show the commands history
 ```sh
@@ -304,15 +304,15 @@ ls /sbin
 ```sh
 echo text
 ```
-#### Show the directories in $PATH environment variable
+#### Show the directories in the $PATH environment variable
 ```sh
 echo $PATH
 ```
 #### Show the dependencies (shared libraries) used by a program
 ```sh
-ldd program_name
+ldd program-name
 ```
-#### Add a new PATH to your terminal shell
+#### Add a new directory on the $PATH environment variable of your terminal shell
 ```sh
 export PATH=$PATH:/your/directory
 ```
@@ -326,7 +326,7 @@ time command
 ```
 #### `name*` | In some programs the * symbol apply an action to all files with that name
 
-#### This operator will launch any executable file from the terminal
+#### This operator will launch any executable file from the terminal (active directory, run `pwd` to know)
 ```sh
 ./
 ```
@@ -336,15 +336,15 @@ program &
 ```
 #### Replace the shell by the called program (similar to "&" or "exit")
 ```sh
-exec program
+exec program-name
 ```
 #### Run a non-executable sh script
 ```sh
-sh your-script-name
+sh script-name
 ```
 #### Run a non-executable Bash script
 ```sh
-bash your-script-name
+bash script-name
 ```
 #### Kill all processes with the specified name
 ```sh
@@ -362,7 +362,7 @@ killall -u user-name
 ```sh
 >
 ```
-#### This operator store the output of a task on some file but don't overwrite it's contents (example: `task > file.txt`)
+#### This operator store the output of a task on some file but don't overwrite its contents (example: `task > file.txt`)
 ```sh
 >>
 ```
@@ -372,27 +372,27 @@ killall -u user-name
 ```
 #### Download any GitHub repository to the active directory
 ```sh
-git clone https://github.com/name-of-the-user/name-of-the-repository.git
+git clone https://github.com/user-name/repository-name.git
 ```
 #### Download any remote Git repository
 ```sh
-git clone https://website-name.com/name-of-the-repository.git
+git clone https://website-name.com/repository-name
 ```
 #### Download a Git repository to the specified directory
 ```sh
-git clone https://website-name.com/name-of-the-repository.git /name/of/your/folder
+git clone https://website-name.com/repository-name your/folder
 ```
 #### Download any file (as the HTTP protocol headers are flexible, it can download the wrong file, so try to specify the exact file without header problems, generally an exposed extension of the file in the URL "https://website.com/nameofthefile.extension")
 ```sh
-wget https://website-name.com/name-of-the-file
+wget https://website-name.com/file-name
 ```
 #### Resume an incomplete download
 ```sh
-wget -c https://website-name.com/name-of-the-file
+wget -c https://website-name.com/file-name
 ```
 #### Download any file and try again from where it stopped if the connection failed (by default wget tries 20 times)
 ```sh
-wget --tries=anynumber https://website-name.com/name-of-the-file
+wget --tries=anynumber https://website-name.com/file-name
 ```
 #### Download from multiple links of a file
 ```sh
@@ -408,7 +408,7 @@ curl -O https://website-name.com
 ```
 #### Resume an incomplete download
 ```sh
-wget -C - -O https://website-name.com/name-of-the-file
+wget -C - -O https://website-name.com/file-name
 ```
 #### Download files from multiple websites at once
 ```sh
@@ -416,11 +416,11 @@ curl -O https://website-name.com -O https://website2-name.com
 ```
 #### Example command for custom [Wine](https://www.winehq.org/) Prefixes
 ```sh
-WINEPREFIX=~/.yourprefixname ./wine
+WINEPREFIX=~/.prefix-name ./wine
 ```
 #### Run Wine Explorer from the specified Wine Prefix
 ```sh
-WINEPREFIX=~/.yourprefixname ./wine explorer
+WINEPREFIX=~/.prefix-name ./wine explorer
 ```
 #### Option to extract [AppImage](https://appimage.org/) files
 ```sh
@@ -461,17 +461,21 @@ rm -rf ~/.cache/thumbnails/*
 
 ## Package Management
 
-#### This common argument remove unused dependencies on some package managers
+#### Remove unused dependencies on Debian and Ubuntu
 ```sh
-autoremove
+sudo apt-get autoremove
 ```
-#### This common argument remove packages cache
+#### Remove the packages cache on Debian and Ubuntu
 ```sh
-autoclean
+sudo apt-get autoclean
 ```
-#### This symbol applies an action to all packagess with that name
+#### This argument example applies an action to all packagess with that name
 ```sh
-package_name*
+package-name*
+```
+Or
+```sh
+*package-name
 ```
 #### Fix a incomplete package install on Debian systems
 ```sh
@@ -512,7 +516,7 @@ ls
 ```sh
 ls -a
 ```
-#### Show almost all files/folders, excluding the hidden . and .. Unix tree files
+#### Show almost all files/folders, excluding the hidden `.` and `..` Unix tree files
 ```sh
 ls -A
 ```
@@ -530,7 +534,7 @@ ls -l
 ```
 #### Show the contents of any text file
 ```sh
-cat /directory/file
+cat directory/file
 ```
 #### Search for a text in the specified file format (recursively)
 ```sh
@@ -542,99 +546,99 @@ grep -nr "text" --include "file-name.type"
 ```
 #### Create a new folder on the active directory
 ```sh
-mkdir name-of-the-folder
+mkdir folder-name
 ```
 #### Copy a file to other folder and overwrite on destination
 ```sh
-cp name-of-your-file /destination/folder
+cp file-name destination-folder
 ```
 #### Copy a file to other folder, overwrite on destination and maintain the file permissions and timestamps
 ```sh
-cp -p name-of-your-file /destination/folder
+cp -p file-name destination-folder
 ```
 #### Show the files that are being copied (verbose mode)
 ```sh
-cp -v name-of-your-file /destination/folder
+cp -v file-name destination-folder
 ```
 #### Ask if you want to overwrite the file
 ```sh
-cp -i name-of-your-file /destination/folder
+cp -i file-name destination-folder
 ```
 #### Copy a file to other folder, maintain permissions/timestamps, show the file being copied, ask permission to overwrite and make a backup
 ```sh
-cp -pvib name-of-your-file /destination/folder
+cp -pvib file-name destination-folder
 ```
 #### Copy/overwrite/backup a file to other folder with backup
 ```sh
-cp -b name-of-your-file /destination/folder
+cp -b file-name destination-folder
 ```
 #### Copy multiple files to other folder and overwrite on destination
 ```sh
-cp file1 file2 /destination/folder
+cp file1 file2 destination-folder
 ```
 #### Copy a folder to other folder and overwrite on destination
 ```sh
-cp -r /name-of-your-folder /destination/folder
+cp -r folder-name destination-folder
 ```
 #### Copy only the things inside the folder and overwrite on destination
 ```sh
-cp -r name-of-your-folder/. /destination/folder
+cp -r folder-name/. destination-folder
 ```
 #### Copy a folder to other folder, maintain permissions/timestamps, show the files being copied, ask permission to overwrite and make a backup
 ```sh
-cp -rpvib name-of-your-folder /destination/folder
+cp -rpvib folder-name destination-folder
 ```
 #### Copy multiple folders to other folder and overwrite on destination
 ```sh
-cp -r folder1 folder2 /destination/folder
+cp -r folder1 folder2 destination-folder
 ```
 #### Move a file/folder to other folder and overwrite on destination
 ```sh
-mv /name-of-your-folder /destination/folder
+mv folder-name destination-folder
 ```
 Or
 ```sh
-mv name-of-your-file /destination/folder
+mv file-name destination-folder
 ```
 #### Ask if you want to overwrite the folder
 ```sh
-mv -i name-of-your-file /destination/folder
+mv -i file-name destination-folder
 ```
 #### Move all files with the specified type to the destination folder
 ```sh
-mv *.type /destination/folder
+mv *.type destination-folder
 ```
 #### Move/rename a folder
 ```sh
-mv /name-of-your-folder /new-folder-name
+mv folder-name new-folder-name
 ```
 #### Remove/delete a file
 ```sh
-rm name-of-the-file
+rm file-name
 ```
 #### Remove/delete any folder recursively without asking for permission (use with caution if you called the command with su/sudo/doas)
 ```sh
-rm -rf /your/folder
+rm -rf your-folder
 ```
 #### Remove an empty directory
 ```sh
-rmdir /your/folder
+rmdir your-folder
 ```
 #### Example command to add text on any file
 ```sh
-echo "text" >> /directory/file
+echo "text" >> directory/file
 ```
-#### `.nameofthefile or .nameofthefolder` | A dot before the name of a file/folder make it hidden
+#### `.file-name` or `.folder-name` | A dot before the name of a file/folder make it hidden
 
-#### Search for files on the directory/subdirectories (run with "sudo" or "su" if these directories are under root permissions)
+#### Search for files on the directory/subdirectories (run with `sudo` or `su` if these directories are under root permissions)
 ```sh
 find . -type f -name file-name
 ```
-#### Search for folders on the directory/subdirectories (run with "sudo" or "su" if the directories are under root permissions)
+#### Search for folders on the directory/subdirectories (run with `sudo` or `su` if the directories are under root permissions)
 ```sh
 find . -type d -name folder-name
 ```
 #### Show all folders/files/subfolders/subfiles in a tree
 ```sh
-tree /name-of-the-folder
+tree folder-name
 ```
